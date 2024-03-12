@@ -166,14 +166,13 @@ export default function InternFormRhfPage() {
             <div className="w-2/3 items-center flex flex-col justify-center gap-1">
                 {fields.map((field, index) => {
                     return (
-                        <div className="p-3 border border-gray-300 flex gap-3">
+                        <div key={field.id} className="p-3 border border-gray-300 flex gap-3">
                             <div>
                                 <label htmlFor="hobby">
                                     Hobby
                                 </label>
                                 <input
                                 {...register(`post.${index}.hobby`)}
-                                key={field.id}
                                 className="mx-2 rounded-md border border-gray-300 text-sm p-1"
                                 type="text" />
                             </div>
